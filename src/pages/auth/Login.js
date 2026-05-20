@@ -89,10 +89,7 @@ const Login = () => {
 
                 </div>
 
-                {/* TITLE */}
-                <h2 className="text-3xl font-bold text-center text-gray-800">
-                    CHRONO DZ
-                </h2>
+                
 
                 <p className="text-gray-500 text-center mb-6 mt-2">
                     Delivering Beyond Time
