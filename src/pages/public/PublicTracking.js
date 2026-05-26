@@ -348,7 +348,7 @@ const PublicTracking = () => {
                                     </h3>
 
                                     <img
-                                        src={`http://localhost:5000/${pod.receiver_signature}`}
+                                        src={`https://chronodz.onrender.com/${pod.receiver_signature}`}
 
                                         alt="Signature"
 
