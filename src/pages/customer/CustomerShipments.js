@@ -353,7 +353,7 @@ const CustomerShipments = () => {
 
                                             {/* Label */}
                                             <a
-                                                href={`https://dzchrono.onrender.com/api/labels/${shipment.awb_no}`}
+                                                href={`https://chronodz.onrender.com/api/labels/${shipment.awb_no}`}
 
                                                 target="_blank"
 

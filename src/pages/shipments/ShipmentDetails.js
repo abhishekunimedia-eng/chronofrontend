@@ -137,7 +137,7 @@ const ShipmentDetails = () => {
 
 
                 <a
-                    href={`https://dzchrono.onrender.com/api/labels/${shipment.awb_no}`}
+                    href={`https://chronodz.onrender.com/api/labels/${shipment.awb_no}`}
 
                     target="_blank"
 
@@ -284,7 +284,7 @@ const ShipmentDetails = () => {
                             </h3>
 
                             <img
-                                src={`https://dzchrono.onrender.com/${pod.delivery_photo}`}
+                                src={`https://chronodz.onrender.com/${pod.delivery_photo}`}
 
                                 alt="POD"
 
@@ -303,7 +303,7 @@ const ShipmentDetails = () => {
                             </h3>
 
                             <img
-                                src={`https://dzchrono.onrender.com/${pod.receiver_signature}`}
+                                src={`https://chronodz.onrender.com/${pod.receiver_signature}`}
 
                                 alt="Signature"
 

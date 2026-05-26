@@ -182,7 +182,7 @@ const InvoiceManagement = () => {
                                 <td className="p-4">
 
                                     <a
-                                        href={`https://dzchrono.onrender.com/invoices/pdf/${invoice.invoice_id}`}
+                                        href={`https://chronodz.onrender.com/invoices/pdf/${invoice.invoice_id}`}
 
                                         target="_blank"
 
