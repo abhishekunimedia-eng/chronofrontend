@@ -328,7 +328,7 @@ const PublicTracking = () => {
                                     </h3>
 
                                     <img
-                                        src={`http://localhost:5000/${pod.delivery_photo}`}
+                                        src={`https://dzchrono.onrender.com/${pod.delivery_photo}`}
 
                                         alt="POD"
 
