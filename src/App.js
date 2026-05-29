@@ -7,6 +7,7 @@ import {
     Route
 
 } from 'react-router-dom';
+import Home from './pages/public/Home';
 
 import Login from './pages/auth/Login';
 
@@ -49,12 +50,14 @@ function App() {
         <BrowserRouter>
 
             <Routes>
+<Route path="/" element={<Home />} />
+<Route
+    path="/login"
+    element={<Login />}
+/>
 
-                {/* Login */}
-                <Route
-                    path="/"
-                    element={<Login />}
-                />
+
+                
 
 
                 {/* Dashboard */}
