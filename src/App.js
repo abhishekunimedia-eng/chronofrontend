@@ -43,6 +43,8 @@ import ShipmentAssignment from './pages/admin/ShipmentAssignment';
 
 import CourierLiveTracking from './pages/courier/CourierLiveTracking';
 
+import Customers from './pages/customer/Customers';
+
 function App() {
 
     return (
@@ -249,6 +251,16 @@ function App() {
 
             <CourierLiveTracking />
 
+        </RoleProtectedRoute>
+    }
+/>
+<Route
+    path="/customers"
+    element={
+        <RoleProtectedRoute
+            allowedRoles={['ADMIN']}
+        >
+            <Customers />
         </RoleProtectedRoute>
     }
 />
