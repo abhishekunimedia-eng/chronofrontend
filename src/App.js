@@ -45,6 +45,10 @@ import CourierLiveTracking from './pages/courier/CourierLiveTracking';
 
 import Customers from './pages/customer/Customers';
 
+import Couriers from './pages/courier/Couriers';
+
+import ManifestManagement from './pages/admin/ManifestManagement';
+
 function App() {
 
     return (
@@ -261,6 +265,27 @@ function App() {
             allowedRoles={['ADMIN']}
         >
             <Customers />
+        </RoleProtectedRoute>
+    }
+/>
+<Route
+    path="/couriers"
+    element={
+        <RoleProtectedRoute
+            allowedRoles={['ADMIN']}
+        >
+            <Couriers />
+        </RoleProtectedRoute>
+    }
+/>
+
+<Route
+    path="/manifest-management"
+    element={
+        <RoleProtectedRoute
+            allowedRoles={['ADMIN']}
+        >
+            <ManifestManagement />
         </RoleProtectedRoute>
     }
 />
