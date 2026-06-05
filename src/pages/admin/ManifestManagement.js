@@ -35,7 +35,7 @@ useState({
 
     driver_mobile: ''
 });
-
+const [hubs, setHubs] = useState([]);
     // =====================================
     // FETCH MANIFESTS
     // =====================================
@@ -65,10 +65,28 @@ useState({
 
     useEffect(() => {
 
-        fetchManifests();
+    fetchManifests();
 
-    }, []);
+    fetchHubs();
 
+}, []);
+
+const fetchHubs = async () => {
+
+    try {
+
+        const response =
+            await api.get('/hubs');
+
+        setHubs(
+            response.data.data || []
+        );
+
+    } catch (error) {
+
+        console.error(error);
+    }
+};
     // =====================================
     // HANDLE CHANGE
     // =====================================
@@ -456,23 +474,53 @@ const saveManifest = async () => {
 
                 <div className="grid md:grid-cols-2 gap-4">
 
-                    <input
-                        type="text"
-                        name="source_hub_id"
-                        placeholder="Source Hub"
-                        value={formData.source_hub_id}
-                        onChange={handleChange}
-                        className="border p-3 rounded"
-                    />
+                   <select
+    name="source_hub_id"
+    value={formData.source_hub_id}
+    onChange={handleChange}
+    className="border p-3 rounded"
+>
 
-                    <input
-                        type="text"
-                        name="destination_hub_id"
-                        placeholder="Destination Hub"
-                        value={formData.destination_hub_id}
-                        onChange={handleChange}
-                        className="border p-3 rounded"
-                    />
+    <option value="">
+        Select Source Hub
+    </option>
+
+    {hubs.map((hub) => (
+
+        <option
+            key={hub.hub_id}
+            value={hub.hub_id}
+        >
+            {hub.hub_name}
+        </option>
+
+    ))}
+
+</select>
+
+                    <select
+    name="destination_hub_id"
+    value={formData.destination_hub_id}
+    onChange={handleChange}
+    className="border p-3 rounded"
+>
+
+    <option value="">
+        Select Destination Hub
+    </option>
+
+    {hubs.map((hub) => (
+
+        <option
+            key={hub.hub_id}
+            value={hub.hub_id}
+        >
+            {hub.hub_name}
+        </option>
+
+    ))}
+
+</select>
 
                     <input
                         type="text"
