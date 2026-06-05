@@ -58,7 +58,7 @@ const Sidebar = () => {
 
         {
             name: 'Manifests',
-            path: '/manifests',
+            path: '/manifest-management',
             icon: <FaClipboardList />
         },
 
